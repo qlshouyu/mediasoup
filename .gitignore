@@ -1,5 +1,4 @@
 ## Meson.
-/build
 /worker/out
 /worker/subprojects/*
 !/worker/subprojects/*.wrap
