@@ -1,0 +1,51 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(FBS)
+message("======FBS====")
+set(flatc "../subprojects/flatbuffers-23.3.3/build/flatc.exe")
+# set(ff 
+#     "${CMAKE_CURRENT_SOURCE_DIR}/activeSpeakerObserver.fbs ${CMAKE_CURRENT_SOURCE_DIR}/audioLevelObserver.fbs common.fbs consumer.fbs dataConsumer.fbs dataProducer.fbs directTransport.fbs liburing.fbs log.fbs message.fbs notification.fbs pipeTransport.fbs plainTransport.fbs producer.fbs request.fbs response.fbs router.fbs rtpObserver.fbs rtpPacket.fbs rtpParameters.fbs  rtpStream.fbs rtxStream.fbs sctpAssociation.fbs sctpParameters.fbs srtpParameters.fbs transport.fbs webRtcServer.fbs webRtcTransport.fbs worker.fbs"
+# )
+set(ff 
+  activeSpeakerObserver.fbs
+  audioLevelObserver.fbs
+  common.fbs
+  consumer.fbs
+  dataConsumer.fbs
+  dataProducer.fbs
+  directTransport.fbs
+  liburing.fbs
+  log.fbs
+  message.fbs
+  notification.fbs
+  pipeTransport.fbs
+  plainTransport.fbs
+  producer.fbs
+  request.fbs
+  response.fbs
+  router.fbs
+  rtpObserver.fbs
+  rtpPacket.fbs
+  rtpParameters.fbs
+  rtpStream.fbs
+  rtxStream.fbs
+  sctpAssociation.fbs
+  sctpParameters.fbs
+  srtpParameters.fbs
+  transport.fbs
+  webRtcServer.fbs
+  webRtcTransport.fbs
+  worker.fbs
+)
+set(OUT_DIR FBS/)
+message("${flatc} --cpp --cpp-field-case-style lower --reflect-names --scoped-enums --filename-suffix " " -o FBS/ ${ff}")
+execute_process(COMMAND ${flatc} --cpp --cpp-field-case-style lower --reflect-names --scoped-enums --filename-suffix " " -o FBS/ ${ff}  WORKING_DIRECTORY ../)
+message("${flatc} --cpp --cpp-field-case-style lower --reflect-names --scoped-enums --filename-suffix " " -o FBS/ ${ff} done")
+file(GLOB SOURCE1 ./FBS/*.h)
+file(GLOB SOURCE2 ./FBS/*.hpp)
+set(SOURCE ${SOURCE1} ${SOURCE2})
+
+
+include_directories(./FBS)
+
+# add_library(FBS STATIC ${SOURCE})

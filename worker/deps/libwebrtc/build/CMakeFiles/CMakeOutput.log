@@ -1,0 +1,75 @@
+The system is: Windows - 10.0.19045 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: D:/Soft/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.33.31629 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.33.31629.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "D:/workspaces/2.my_project/mediasoup/worker/deps/libwebrtc/build/CMakeFiles/3.24.1/CompilerIdC/CMakeCCompilerId.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: D:/Soft/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.33.31629 版
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.33.31629.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "D:/workspaces/2.my_project/mediasoup/worker/deps/libwebrtc/build/CMakeFiles/3.24.1/CompilerIdCXX/CMakeCXXCompilerId.exe"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/deps/libwebrtc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_a08ec\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_a08ec.dir\build.make /nologo -L                  CMakeFiles\cmTC_a08ec.dir\build
+Building C object CMakeFiles/cmTC_a08ec.dir/CMakeCCompilerABI.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_a08ec.dir\CMakeCCompilerABI.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\deps\libwebrtc\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm8DF9.tmp
+CMakeCCompilerABI.c
+?鈷? 鍖呭惈鏂囦欢:  D:\Soft\CMake\share\cmake-3.24\Modules\CMakeCompilerABI.h
+Linking C executable cmTC_a08ec.exe
+	D:\Soft\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_a08ec.dir --rc="D:\Windows Kits\10\bin\10.0.20348.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.20348.0\x64\mt.exe" --manifests -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\cmTC_a08ec.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nm8F81.tmp
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/deps/libwebrtc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_3df76\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_3df76.dir\build.make /nologo -L                  CMakeFiles\cmTC_3df76.dir\build
+Building CXX object CMakeFiles/cmTC_3df76.dir/CMakeCXXCompilerABI.cpp.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_3df76.dir\CMakeCXXCompilerABI.cpp.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\deps\libwebrtc\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm9200.tmp
+CMakeCXXCompilerABI.cpp
+?鈷? 鍖呭惈鏂囦欢:  D:\Soft\CMake\share\cmake-3.24\Modules\CMakeCompilerABI.h
+Linking CXX executable cmTC_3df76.exe
+	D:\Soft\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_3df76.dir --rc="D:\Windows Kits\10\bin\10.0.20348.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.20348.0\x64\mt.exe" --manifests -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\cmTC_3df76.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nm927E.tmp
+
+
+

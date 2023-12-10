@@ -1,0 +1,783 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_ce663\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_ce663.dir\build.make /nologo -L                  CMakeFiles\cmTC_ce663.dir\build
+Building C object CMakeFiles/cmTC_ce663.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_ce663.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmD1B3.tmp
+src.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\src.c(1): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_d740e\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_d740e.dir\build.make /nologo -L                  CMakeFiles\cmTC_d740e.dir\build
+Building C object CMakeFiles/cmTC_d740e.dir/CheckFunctionExists.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_d740e.dir\CheckFunctionExists.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmD2BD.tmp
+CheckFunctionExists.c
+Linking C executable cmTC_d740e.exe
+	D:\Soft\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_d740e.dir --rc="D:\Windows Kits\10\bin\10.0.20348.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.20348.0\x64\mt.exe" --manifests -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\cmTC_d740e.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nmD34B.tmp
+LINK Pass 1: command "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_d740e.dir\objects1.rsp /out:cmTC_d740e.exe /implib:cmTC_d740e.lib /pdb:D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\cmTC_d740e.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_d740e.dir/intermediate.manifest CMakeFiles\cmTC_d740e.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: 无法打开文件“pthreads.lib”
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0xffffffff”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_6595e\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_6595e.dir\build.make /nologo -L                  CMakeFiles\cmTC_6595e.dir\build
+Building C object CMakeFiles/cmTC_6595e.dir/CheckFunctionExists.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_6595e.dir\CheckFunctionExists.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmD453.tmp
+CheckFunctionExists.c
+Linking C executable cmTC_6595e.exe
+	D:\Soft\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_6595e.dir --rc="D:\Windows Kits\10\bin\10.0.20348.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.20348.0\x64\mt.exe" --manifests -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\cmTC_6595e.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nmD4C2.tmp
+LINK Pass 1: command "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_6595e.dir\objects1.rsp /out:cmTC_6595e.exe /implib:cmTC_6595e.lib /pdb:D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\cmTC_6595e.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_6595e.dir/intermediate.manifest CMakeFiles\cmTC_6595e.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: 无法打开文件“pthread.lib”
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0xffffffff”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the include file arpa/inet.h exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_e04f4\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_e04f4.dir\build.make /nologo -L                  CMakeFiles\cmTC_e04f4.dir\build
+Building C object CMakeFiles/cmTC_e04f4.dir/CheckIncludeFile.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_e04f4.dir\CheckIncludeFile.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm7F3F.tmp
+CheckIncludeFile.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渁rpa/inet.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the include file byteswap.h exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_60711\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_60711.dir\build.make /nologo -L                  CMakeFiles\cmTC_60711.dir\build
+Building C object CMakeFiles/cmTC_60711.dir/CheckIncludeFile.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_60711.dir\CheckIncludeFile.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm8039.tmp
+CheckIncludeFile.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渂yteswap.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the include file machine/types.h exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_853b9\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_853b9.dir\build.make /nologo -L                  CMakeFiles\cmTC_853b9.dir\build
+Building C object CMakeFiles/cmTC_853b9.dir/CheckIncludeFile.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_853b9.dir\CheckIncludeFile.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm83E3.tmp
+CheckIncludeFile.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渕achine/types.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the include file netinet/in.h exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_8612a\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_8612a.dir\build.make /nologo -L                  CMakeFiles\cmTC_8612a.dir\build
+Building C object CMakeFiles/cmTC_8612a.dir/CheckIncludeFile.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_8612a.dir\CheckIncludeFile.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm84CD.tmp
+CheckIncludeFile.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渘etinet/in.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the include file sys/int_types.h exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_e28d3\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_e28d3.dir\build.make /nologo -L                  CMakeFiles\cmTC_e28d3.dir\build
+Building C object CMakeFiles/cmTC_e28d3.dir/CheckIncludeFile.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_e28d3.dir\CheckIncludeFile.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm8B07.tmp
+CheckIncludeFile.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渟ys/int_types.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the include file sys/socket.h exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_52041\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_52041.dir\build.make /nologo -L                  CMakeFiles\cmTC_52041.dir\build
+Building C object CMakeFiles/cmTC_52041.dir/CheckIncludeFile.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_52041.dir\CheckIncludeFile.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm8C11.tmp
+CheckIncludeFile.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渟ys/socket.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_ad9bb\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_ad9bb.dir\build.make /nologo -L                  CMakeFiles\cmTC_ad9bb.dir\build
+Building C object CMakeFiles/cmTC_ad9bb.dir/CheckIncludeFile.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_ad9bb.dir\CheckIncludeFile.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm8FAB.tmp
+CheckIncludeFile.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渦nistd.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the function sigaction exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_af0ab\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_af0ab.dir\build.make /nologo -L                  CMakeFiles\cmTC_af0ab.dir\build
+Building C object CMakeFiles/cmTC_af0ab.dir/CheckFunctionExists.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_af0ab.dir\CheckFunctionExists.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm9BEF.tmp
+CheckFunctionExists.c
+Linking C executable cmTC_af0ab.exe
+	D:\Soft\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_af0ab.dir --rc="D:\Windows Kits\10\bin\10.0.20348.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.20348.0\x64\mt.exe" --manifests -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\cmTC_af0ab.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nm9C6D.tmp
+LINK Pass 1: command "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_af0ab.dir\objects1.rsp /out:cmTC_af0ab.exe /implib:cmTC_af0ab.lib /pdb:D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\cmTC_af0ab.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_af0ab.dir/intermediate.manifest CMakeFiles\cmTC_af0ab.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: 无法解析的外部符号 sigaction，函数 main 中引用了该符号
+cmTC_af0ab.exe : fatal error LNK1120: 1 个无法解析的外部命令
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0xffffffff”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the function inet_aton exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_72e2e\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_72e2e.dir\build.make /nologo -L                  CMakeFiles\cmTC_72e2e.dir\build
+Building C object CMakeFiles/cmTC_72e2e.dir/CheckFunctionExists.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_72e2e.dir\CheckFunctionExists.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm9D95.tmp
+CheckFunctionExists.c
+Linking C executable cmTC_72e2e.exe
+	D:\Soft\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_72e2e.dir --rc="D:\Windows Kits\10\bin\10.0.20348.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.20348.0\x64\mt.exe" --manifests -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\cmTC_72e2e.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nm9E03.tmp
+LINK Pass 1: command "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_72e2e.dir\objects1.rsp /out:cmTC_72e2e.exe /implib:cmTC_72e2e.lib /pdb:D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\cmTC_72e2e.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_72e2e.dir/intermediate.manifest CMakeFiles\cmTC_72e2e.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: 无法解析的外部符号 inet_aton，函数 main 中引用了该符号
+cmTC_72e2e.exe : fatal error LNK1120: 1 个无法解析的外部命令
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0xffffffff”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the function inet_pton exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_5c3f4\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_5c3f4.dir\build.make /nologo -L                  CMakeFiles\cmTC_5c3f4.dir\build
+Building C object CMakeFiles/cmTC_5c3f4.dir/CheckFunctionExists.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_5c3f4.dir\CheckFunctionExists.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nm9F3B.tmp
+CheckFunctionExists.c
+Linking C executable cmTC_5c3f4.exe
+	D:\Soft\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_5c3f4.dir --rc="D:\Windows Kits\10\bin\10.0.20348.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.20348.0\x64\mt.exe" --manifests -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\cmTC_5c3f4.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nm9FB9.tmp
+LINK Pass 1: command "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_5c3f4.dir\objects1.rsp /out:cmTC_5c3f4.exe /implib:cmTC_5c3f4.lib /pdb:D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\cmTC_5c3f4.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_5c3f4.dir/intermediate.manifest CMakeFiles\cmTC_5c3f4.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: 无法解析的外部符号 inet_pton，函数 main 中引用了该符号
+cmTC_5c3f4.exe : fatal error LNK1120: 1 个无法解析的外部命令
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0xffffffff”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Determining if the function usleep exists failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_ddcc6\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_ddcc6.dir\build.make /nologo -L                  CMakeFiles\cmTC_ddcc6.dir\build
+Building C object CMakeFiles/cmTC_ddcc6.dir/CheckFunctionExists.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_ddcc6.dir\CheckFunctionExists.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmA0E1.tmp
+CheckFunctionExists.c
+Linking C executable cmTC_ddcc6.exe
+	D:\Soft\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_ddcc6.dir --rc="D:\Windows Kits\10\bin\10.0.20348.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.20348.0\x64\mt.exe" --manifests -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\cmTC_ddcc6.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nmA15F.tmp
+LINK Pass 1: command "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_ddcc6.dir\objects1.rsp /out:cmTC_ddcc6.exe /implib:cmTC_ddcc6.lib /pdb:D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\cmTC_ddcc6.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_ddcc6.dir/intermediate.manifest CMakeFiles\cmTC_ddcc6.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: 无法解析的外部符号 usleep，函数 main 中引用了该符号
+cmTC_ddcc6.exe : fatal error LNK1120: 1 个无法解析的外部命令
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0xffffffff”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+
+Performing C SOURCE FILE Test UV_LINT_NO_UNUSED_PARAMETER failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_cdf25\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_cdf25.dir\build.make /nologo -L                  CMakeFiles\cmTC_cdf25.dir\build
+Building C object CMakeFiles/cmTC_cdf25.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_cdf25.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmDB3A.tmp
+cl: 鍛戒护琛?error D8021 :鏃犳晥鐨勬暟鍊煎弬鏁扳€?Wno-unused-parameter鈥?NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test UV_LINT_STRICT_PROTOTYPES failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_9ad78\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_9ad78.dir\build.make /nologo -L                  CMakeFiles\cmTC_9ad78.dir\build
+Building C object CMakeFiles/cmTC_9ad78.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_9ad78.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmDC05.tmp
+cl: 鍛戒护琛?error D8021 :鏃犳晥鐨勬暟鍊煎弬鏁扳€?Wstrict-prototypes鈥?NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test UV_LINT_EXTRA failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_a5f85\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_a5f85.dir\build.make /nologo -L                  CMakeFiles\cmTC_a5f85.dir\build
+Building C object CMakeFiles/cmTC_a5f85.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_a5f85.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmDCE0.tmp
+cl: 鍛戒护琛?error D8021 :鏃犳晥鐨勬暟鍊煎弬鏁扳€?Wextra鈥?NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test UV_F_STRICT_ALIASING failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_e8fd6\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_e8fd6.dir\build.make /nologo -L                  CMakeFiles\cmTC_e8fd6.dir\build
+Building C object CMakeFiles/cmTC_e8fd6.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_e8fd6.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmE02C.tmp
+cl: 鍛戒护琛?warning D9002 :蹇界暐鏈煡閫夐」鈥?fno-strict-aliasing鈥?src.c
+Linking C executable cmTC_e8fd6.exe
+	D:\Soft\CMake\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\cmTC_e8fd6.dir --rc="D:\Windows Kits\10\bin\10.0.20348.0\x64\rc.exe" --mt="D:\Windows Kits\10\bin\10.0.20348.0\x64\mt.exe" --manifests -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\cmTC_e8fd6.dir\objects1.rsp @C:\Users\ADMINI~1\AppData\Local\Temp\nmE0AA.tmp
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if files sys/queue.h exist failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_69d58\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_69d58.dir\build.make /nologo -L                  CMakeFiles\cmTC_69d58.dir\build
+Building C object CMakeFiles/cmTC_69d58.dir/have_sys_queue_h.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_69d58.dir\have_sys_queue_h.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmE2FB.tmp
+have_sys_queue_h.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CheckIncludeFiles\have_sys_queue_h.c(2): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渟ys/queue.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source:
+/* */
+#include <sys/queue.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/socket.h;linux/if_addr.h exist failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_2d675\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_2d675.dir\build.make /nologo -L                  CMakeFiles\cmTC_2d675.dir\build
+Building C object CMakeFiles/cmTC_2d675.dir/have_linux_if_addr_h.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_2d675.dir\have_linux_if_addr_h.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmE3E5.tmp
+have_linux_if_addr_h.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CheckIncludeFiles\have_linux_if_addr_h.c(2): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渟ys/socket.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source:
+/* */
+#include <sys/socket.h>
+#include <linux/if_addr.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/socket.h;linux/rtnetlink.h exist failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_46863\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_46863.dir\build.make /nologo -L                  CMakeFiles\cmTC_46863.dir\build
+Building C object CMakeFiles/cmTC_46863.dir/have_linux_rtnetlink_h.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_46863.dir\have_linux_rtnetlink_h.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmE4CF.tmp
+have_linux_rtnetlink_h.c
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CheckIncludeFiles\have_linux_rtnetlink_h.c(2): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渟ys/socket.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source:
+/* */
+#include <sys/socket.h>
+#include <linux/rtnetlink.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;netinet/in.h;netinet/ip.h;netinet/ip_icmp.h exist failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_86848\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_86848.dir\build.make /nologo -L                  CMakeFiles\cmTC_86848.dir\build
+Building C object CMakeFiles/cmTC_86848.dir/have_netinet_ip_icmp_h.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_86848.dir\have_netinet_ip_icmp_h.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmE5BA.tmp
+have_netinet_ip_icmp_h.c
+?鈷? 鍖呭惈鏂囦欢:  D:\Windows Kits\10\include\10.0.20348.0\ucrt\sys/types.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vadefs.h
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CheckIncludeFiles\have_netinet_ip_icmp_h.c(3): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渘etinet/in.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <netinet/ip.h>
+#include <netinet/ip_icmp.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;sys/socket.h;net/route.h exist failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_4b8bb\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_4b8bb.dir\build.make /nologo -L                  CMakeFiles\cmTC_4b8bb.dir\build
+Building C object CMakeFiles/cmTC_4b8bb.dir/have_net_route_h.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_4b8bb.dir\have_net_route_h.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmE6C3.tmp
+have_net_route_h.c
+?鈷? 鍖呭惈鏂囦欢:  D:\Windows Kits\10\include\10.0.20348.0\ucrt\sys/types.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CheckIncludeFiles\have_net_route_h.c(3): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渟ys/socket.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <net/route.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdatomic.h exist failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_4eba1\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_4eba1.dir\build.make /nologo -L                  CMakeFiles\cmTC_4eba1.dir\build
+Building C object CMakeFiles/cmTC_4eba1.dir/have_stdatomic_h.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_4eba1.dir\have_stdatomic_h.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmE7AE.tmp
+have_stdatomic_h.c
+?鈷? 鍖呭惈鏂囦欢:  D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdatomic.h
+D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdatomic.h(15): fatal error C1189: #error:  <stdatomic.h> is not yet supported when compiling as C, but this is planned for a future release.
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source:
+/* */
+#include <stdatomic.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test have_sa_len failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_ee35f\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_ee35f.dir\build.make /nologo -L                  CMakeFiles\cmTC_ee35f.dir\build
+Building C object CMakeFiles/cmTC_ee35f.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_ee35f.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmECAF.tmp
+src.c
+?鈷? 鍖呭惈鏂囦欢:  D:\Windows Kits\10\include\10.0.20348.0\ucrt\sys/types.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\src.c(3): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渟ys/socket.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/socket.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr *)0)->sa_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test have_sin_len failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_f7f19\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_f7f19.dir\build.make /nologo -L                  CMakeFiles\cmTC_f7f19.dir\build
+Building C object CMakeFiles/cmTC_f7f19.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_f7f19.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmEDB9.tmp
+src.c
+?鈷? 鍖呭惈鏂囦欢:  D:\Windows Kits\10\include\10.0.20348.0\ucrt\sys/types.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vadefs.h
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\src.c(3): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渘etinet/in.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_in *)0)->sin_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test have_sin6_len failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_3d56c\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_3d56c.dir\build.make /nologo -L                  CMakeFiles\cmTC_3d56c.dir\build
+Building C object CMakeFiles/cmTC_3d56c.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_3d56c.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmEEB3.tmp
+src.c
+?鈷? 鍖呭惈鏂囦欢:  D:\Windows Kits\10\include\10.0.20348.0\ucrt\sys/types.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vadefs.h
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\src.c(3): fatal error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥渘etinet/in.h鈥? No such file or directory
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_in6 *)0)->sin6_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test have_sconn_len failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_6b332\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_6b332.dir\build.make /nologo -L                  CMakeFiles\cmTC_6b332.dir\build
+Building C object CMakeFiles/cmTC_6b332.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_6b332.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmEFBC.tmp
+src.c
+?鈷? 鍖呭惈鏂囦欢:  D:\workspaces\2.my_project\mediasoup\worker\subprojects\usrsctp-4e06feb01cadcd127d119486b98a4bd3d64aa1e7\usrsctplib\usrsctp.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Windows Kits\10\include\10.0.20348.0\ucrt\errno.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\sal.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\concurrencysal.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vadefs.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Windows Kits\10\include\10.0.20348.0\ucrt\sys/types.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Windows Kits\10\include\10.0.20348.0\um\winsock2.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Windows Kits\10\include\10.0.20348.0\shared\winapifamily.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\shared\winpackagefamily.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Windows Kits\10\include\10.0.20348.0\um\windows.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\shared\sdkddkver.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\excpt.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdarg.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\shared\windef.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\minwindef.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\specstrings.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\specstrings_strict.h
+?鈷? 鍖呭惈鏂囦欢:         D:\Windows Kits\10\include\10.0.20348.0\shared\specstrings_undef.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\driverspecs.h
+?鈷? 鍖呭惈鏂囦欢:         D:\Windows Kits\10\include\10.0.20348.0\shared\sdv_driverspecs.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\winnt.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\ucrt\ctype.h
+?鈷? 鍖呭惈鏂囦欢:         D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt_wctype.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\kernelspecs.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\basetsd.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\guiddef.h
+?鈷? 鍖呭惈鏂囦欢:          D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt_memory.h
+?鈷? 鍖呭惈鏂囦欢:           D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt_memcpy_s.h
+?鈷? 鍖呭惈鏂囦欢:            D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime_string.h
+?鈷? 鍖呭惈鏂囦欢:          D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt_wstring.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack4.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack4.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack4.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack2.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack1.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\apiset.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\ktmtypes.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winbase.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\apisetcconv.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\minwinbase.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\apiquery2.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\processenv.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\fileapifromapp.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\fileapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\debugapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\utilapiset.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\handleapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\errhandlingapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\fibersapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\namedpipeapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\profileapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\heapapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\ioapiset.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\synchapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\interlockedapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\processthreadsapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\sysinfoapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\memoryapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\enclaveapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\threadpoollegacyapiset.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\threadpoolapiset.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\jobapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\jobapi2.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\wow64apiset.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\libloaderapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\securitybaseapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\namespaceapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\systemtopologyapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\processtopologyapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\securityappcontainer.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\realtimeapiset.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\winerror.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\timezoneapi.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\wingdi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack1.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack2.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winuser.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack2.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\tvout.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winnls.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\datetimeapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\stringapiset.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\wincon.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\consoleapi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\consoleapi2.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\consoleapi3.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winver.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\verrsrc.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winreg.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\reason.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winnetwk.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\wnnc.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\shared\cderr.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\ddeml.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\dlgs.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\lzexpand.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\mmsystem.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\mmsyscom.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack1.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\mciapi.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\mmsyscom.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\mmiscapi.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\mmsyscom.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\mmiscapi2.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\playsoundapi.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\mmsyscom.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\mmeapi.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\mmsyscom.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\timeapi.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\mmsyscom.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\joystickapi.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\mmsyscom.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\shared\rpc.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\rpcdce.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\rpcdcep.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\rpcnsi.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\rpcnterr.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\rpcasync.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack8.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\shellapi.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winperf.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack8.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\wincrypt.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\bcrypt.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\ncrypt.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\dpapi.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winefs.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winscard.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\rpcndr.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\um\rpcnsip.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\guiddef.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\winioctl.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack1.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack1.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack1.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack1.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\winsmcrd.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winspool.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack8.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\ole2.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\objbase.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack8.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\ucrt\stdlib.h
+?鈷? 鍖呭惈鏂囦欢:         D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt_malloc.h
+?鈷? 鍖呭惈鏂囦欢:         D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt_search.h
+?鈷? 鍖呭惈鏂囦欢:          D:\Windows Kits\10\include\10.0.20348.0\ucrt\stddef.h
+?鈷? 鍖呭惈鏂囦欢:         D:\Windows Kits\10\include\10.0.20348.0\ucrt\corecrt_wstdlib.h
+?鈷? 鍖呭惈鏂囦欢:         D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\limits.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\um\unknwnbase.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\um\objidlbase.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\guiddef.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\coml2api.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\um\objidl.h
+?鈷? 鍖呭惈鏂囦欢:         D:\Windows Kits\10\include\10.0.20348.0\um\unknwn.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\um\propidlbase.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\urlmon.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\um\oleidl.h
+?鈷? 鍖呭惈鏂囦欢:        D:\Windows Kits\10\include\10.0.20348.0\um\servprov.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\um\propidl.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\pshpack8.h
+?鈷? 鍖呭惈鏂囦欢:       D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\shared\poppack.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\prsht.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\shared\stralign.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\winsvc.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\mcx.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\um\imm.h
+?鈷? 鍖呭惈鏂囦欢:      D:\Windows Kits\10\include\10.0.20348.0\um\ime_cmodes.h
+?鈷? 鍖呭惈鏂囦欢:     D:\Windows Kits\10\include\10.0.20348.0\shared\inaddr.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Windows Kits\10\include\10.0.20348.0\shared\qos.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Windows Kits\10\include\10.0.20348.0\um\ws2tcpip.h
+?鈷? 鍖呭惈鏂囦欢:    D:\Windows Kits\10\include\10.0.20348.0\shared\ws2ipdef.h
+?鈷? 鍖呭惈鏂囦欢:   D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdint.h
+D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp\src.c(6): error C2039: "sconn_len": 涓嶆槸 "sockaddr_conn" 鐨勬垚鍛?D:\workspaces\2.my_project\mediasoup\worker\subprojects\usrsctp-4e06feb01cadcd127d119486b98a4bd3d64aa1e7\usrsctplib\usrsctp.h(131): note: 鍙傝鈥渟ockaddr_conn鈥濈殑澹版槑
+NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+
+#include <usrsctp.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_conn *)0)->sconn_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test has_wno_address_of_packed_member failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_7fddc\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_7fddc.dir\build.make /nologo -L                  CMakeFiles\cmTC_7fddc.dir\build
+Building C object CMakeFiles/cmTC_7fddc.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_7fddc.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmF21E.tmp
+cl: 鍛戒护琛?error D8021 :鏃犳晥鐨勬暟鍊煎弬鏁扳€?Wno-address-of-packed-member鈥?NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wno_deprecated_declarations failed with the following output:
+Change Dir: D:/workspaces/2.my_project/mediasoup/worker/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake -f Makefile /nologo cmTC_3d4c2\fast && 	"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_3d4c2.dir\build.make /nologo -L                  CMakeFiles\cmTC_3d4c2.dir\build
+Building C object CMakeFiles/cmTC_3d4c2.dir/src.c.obj
+	D:\Soft\CMake\bin\cmake.exe -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_3d4c2.dir\src.c.obj.d --working-dir=D:\workspaces\2.my_project\mediasoup\worker\build\CMakeFiles\CMakeTmp --filter-prefix="注意: 包含文件:  " -- "D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64\cl.exe" @C:\Users\ADMINI~1\AppData\Local\Temp\nmF2F8.tmp
+cl: 鍛戒护琛?error D8021 :鏃犳晥鐨勬暟鍊煎弬鏁扳€?Wno-deprecated-declarations鈥?NMAKE : fatal error U1077: “D:\Soft\CMake\bin\cmake.exe”: 返回代码“0x2”
+Stop.
+NMAKE : fatal error U1077: “"D:\Soft\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\nmake.exe"”: 返回代码“0x2”
+Stop.
+
+
+Source file was:
+int main(void) { return 0; }

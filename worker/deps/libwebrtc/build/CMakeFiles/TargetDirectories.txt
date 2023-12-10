@@ -1,0 +1,4 @@
+D:/workspaces/2.my_project/mediasoup/worker/deps/libwebrtc/build/CMakeFiles/webrtc.dir
+D:/workspaces/2.my_project/mediasoup/worker/deps/libwebrtc/build/CMakeFiles/webrtc_a.dir
+D:/workspaces/2.my_project/mediasoup/worker/deps/libwebrtc/build/CMakeFiles/edit_cache.dir
+D:/workspaces/2.my_project/mediasoup/worker/deps/libwebrtc/build/CMakeFiles/rebuild_cache.dir
