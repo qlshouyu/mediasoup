@@ -1,0 +1,23 @@
+{
+  "configurations": [
+      {
+          "name": "Windows",
+          "intelliSenseMode": "msvc-x64",
+          "compilerPath": "cl.exe",
+          "includePath": [
+              "${workspaceFolder}/worker/include"
+          ],
+          "defines": [],
+          "browse": {
+              "path": [
+                  "${workspaceFolder}"
+              ],
+              "limitSymbolsToIncludedHeaders": true,
+              "databaseFilename": ""
+          },
+          "cStandard": "c17",
+          "cppStandard": "c++17"
+      }
+  ],
+  "version": 4
+}
